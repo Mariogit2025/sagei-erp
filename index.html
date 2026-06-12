@@ -3,66 +3,56 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SAGEI ERP 2026 - Ferretería Comercial Emmanuel</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
+<title>SAGEI ERP Premium V2</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
 html{scroll-behavior:smooth}
 body{background:#08111f;color:#fff;overflow-x:hidden}
-.navbar{position:fixed;top:0;left:0;width:100%;background:rgba(8,17,31,.95);backdrop-filter:blur(12px);padding:15px 8%;display:flex;justify-content:space-between;align-items:center;z-index:9999;border-bottom:1px solid rgba(255,255,255,.08)}
-.navbar .menu a{color:#fff;text-decoration:none;margin-left:20px;font-size:14px}
-.navbar .menu a:hover{color:#60a5fa}
-.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:120px 20px 60px;background:radial-gradient(circle at top,#1d4ed8 0%,#08111f 55%),#08111f}
-.logo{width:260px;max-width:85%;margin-bottom:30px}
-h1{font-size:72px;font-weight:800;margin-bottom:10px}
-.subtitulo{font-size:24px;color:#dbe4f0;max-width:900px;margin-bottom:30px}
-.modulos{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
-.modulo{background:rgba(255,255,255,.08);padding:12px 20px;border-radius:50px}
-.botones{display:flex;gap:15px;margin-top:40px;flex-wrap:wrap;justify-content:center}
-.btn{padding:15px 35px;border-radius:50px;text-decoration:none;font-weight:600;transition:.3s}
-.btn-primary{background:#2563eb;color:#fff}
-.btn-primary:hover,.card:hover,.info-card:hover{transform:translateY(-8px)}
-.btn-secondary{border:1px solid rgba(255,255,255,.3);color:#fff}
-section{padding:90px 8%}
-.titulo-seccion{font-size:48px;text-align:center;margin-bottom:20px}
-.texto-seccion{text-align:center;max-width:900px;margin:auto;color:#cbd5e1;font-size:18px}
-.stats,.grid4,.galeria{display:grid;gap:25px}
-.stats,.grid4{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:40px}
-.stat-card,.info-card,.card,.cliente-box{background:#111827;border-radius:20px;border:1px solid rgba(255,255,255,.08)}
-.stat-card,.info-card{padding:30px;text-align:center}
-.stat-card h3{font-size:42px;color:#60a5fa}
-.cliente-box{padding:35px;display:grid;grid-template-columns:380px 1fr;gap:30px;align-items:center}
-.cliente-box img{width:100%;border-radius:15px}
-.lista{line-height:2;color:#dbe4f0;margin-top:15px}
-.contacto-asesor{margin-top:20px;color:#60a5fa;font-weight:600}
-.galeria{grid-template-columns:repeat(auto-fit,minmax(350px,1fr));margin-top:50px}
-.card{overflow:hidden;transition:.35s;cursor:pointer}
-.card img{width:100%;height:320px;object-fit:cover;transition:.35s}
-.card:hover img{transform:scale(1.04)}
-.card-body{padding:25px}
-.card-body p{color:#cbd5e1;line-height:1.8}
-.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.95);justify-content:center;align-items:center;z-index:99999}
+.navbar{position:fixed;top:0;width:100%;background:rgba(8,17,31,.96);backdrop-filter:blur(12px);display:flex;justify-content:space-between;align-items:center;padding:14px 5%;z-index:9999}
+.logo-text{font-weight:800;color:#60a5fa}
+.menu{display:flex;gap:18px}
+.menu a{color:#fff;text-decoration:none}
+.toggle{display:none;font-size:28px;cursor:pointer}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:120px 20px;background:radial-gradient(circle at top,#2563eb,#08111f 60%)}
+.hero img{max-width:260px;width:80%}
+h1{font-size:clamp(3rem,8vw,5rem)}
+.sub{max-width:900px;color:#dbe4f0;font-size:clamp(1rem,2vw,1.4rem);margin:20px 0}
+.tags,.buttons{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.tag{background:#ffffff14;padding:12px 18px;border-radius:30px}
+.btn{padding:14px 28px;border-radius:40px;text-decoration:none}
+.primary{background:#2563eb;color:#fff}
+.secondary{border:1px solid #ffffff40;color:#fff}
+section{padding:90px 6%}
+.title{text-align:center;font-size:clamp(2rem,5vw,3rem);margin-bottom:25px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px}
+.card,.box{background:#111827;border:1px solid #ffffff10;border-radius:22px;padding:25px;transition:.3s}
+.card:hover,.box:hover{transform:translateY(-8px)}
+.client{display:grid;grid-template-columns:420px 1fr;gap:35px;align-items:center}
+.client img{width:100%;border-radius:18px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:25px}
+.gallery .item{background:#111827;border-radius:20px;overflow:hidden}
+.gallery img{width:100%;height:260px;object-fit:cover;cursor:pointer}
+.gallery div{padding:20px}
+.whatsapp{position:fixed;right:20px;bottom:20px;background:#25D366;color:#fff;padding:15px 18px;border-radius:50px;text-decoration:none;font-weight:700;z-index:9999}
+.lightbox{display:none;position:fixed;inset:0;background:#000d;justify-content:center;align-items:center;z-index:99999}
 .lightbox img{max-width:95%;max-height:95%}
-.fade{opacity:0;transform:translateY(40px);transition:all .8s}
-.fade.show{opacity:1;transform:none}
-.footer{padding:60px 8%;background:#050b16;text-align:center}
-@media(max-width:768px){
-h1{font-size:44px}
-.titulo-seccion{font-size:34px}
-.cliente-box{grid-template-columns:1fr}
-.galeria{grid-template-columns:1fr}
-.card img{height:240px}
-.navbar{padding:12px 20px}
-.menu a{font-size:12px;margin-left:10px}
+.footer{text-align:center;padding:60px 20px;background:#050b16}
+@media(max-width:900px){
+.client{grid-template-columns:1fr}
+.menu{display:none;position:absolute;top:65px;left:0;right:0;background:#08111f;flex-direction:column;padding:20px}
+.menu.show{display:flex}
+.toggle{display:block}
+section{padding:70px 4%}
+.gallery{grid-template-columns:1fr}
 }
 </style>
 </head>
 <body>
 
 <nav class="navbar">
-<div><strong>SAGEI ERP</strong></div>
+<div class="logo-text">SAGEI ERP</div>
+<div class="toggle" onclick="document.querySelector('.menu').classList.toggle('show')">☰</div>
 <div class="menu">
 <a href="#cliente">Cliente</a>
 <a href="#beneficios">Beneficios</a>
@@ -73,118 +63,91 @@ h1{font-size:44px}
 </nav>
 
 <section class="hero">
-<img src="assets/logo/Logo_Sagei_2026.png" class="logo">
+<img src="assets/logo/Logo_Sagei_2026.png">
 <h1>SAGEI ERP</h1>
-<p class="subtitulo">ERP Administrativo, Comercial y Contable diseñado para integrar toda la operación de su empresa en una sola plataforma.</p>
-<div class="modulos">
-<div class="modulo">📦 Inventarios</div><div class="modulo">💰 Facturación FEL</div><div class="modulo">🤝 Créditos</div><div class="modulo">🏦 Bancos</div><div class="modulo">📊 Contabilidad</div><div class="modulo">📈 Reportes</div>
+<p class="sub">Presentación exclusiva para Ferretería Comercial Emmanuel.</p>
+<div class="tags">
+<div class="tag">📦 Inventarios</div>
+<div class="tag">💰 FEL</div>
+<div class="tag">🏦 Bancos</div>
+<div class="tag">📊 Contabilidad</div>
+<div class="tag">📈 Reportes</div>
 </div>
-<div class="botones">
-<a href="#modulos" class="btn btn-primary">Ver Funcionalidades</a>
-<a href="#contacto" class="btn btn-secondary">Solicitar Demostración</a>
+<div class="buttons" style="margin-top:25px">
+<a class="btn primary" href="#modulos">Ver Funcionalidades</a>
+<a class="btn secondary" href="#contacto">Solicitar Demo</a>
 </div>
 </section>
 
-<section id="cliente" class="fade">
-<h2 class="titulo-seccion">PRESENTACIÓN EXCLUSIVA<br>Ferretería Comercial Emmanuel</h2>
-<div class="cliente-box">
-<img src="assets/clientes/emmanuel.jpg" alt="Ferretería Comercial Emmanuel">
+<section id="cliente">
+<h2 class="title">Presentación Exclusiva<br>Ferretería Comercial Emmanuel</h2>
+<div class="client box">
+<img src="assets/clientes/emmanuel.jpg">
 <div>
-<p>Hemos preparado esta demostración personalizada para mostrar cómo SAGEI ERP puede ayudar a optimizar el control de inventarios, facturación electrónica, créditos, bancos, contabilidad y reportes gerenciales de su empresa.</p>
-<div class="lista">
-✓ Inventarios en tiempo real<br>
-✓ Facturación Electrónica FEL<br>
-✓ Créditos y Cobranza<br>
-✓ Bancos y Conciliaciones<br>
-✓ Contabilidad Integrada<br>
-✓ Reportes Gerenciales
-</div>
-<div class="contacto-asesor">Mario Mirandaz<br>Grupo Sagei<br>4152-5433</div>
+<p>Demostración personalizada para optimizar inventarios, facturación electrónica, créditos, bancos, contabilidad y reportes gerenciales.</p><br>
+<p>✓ Inventarios en tiempo real<br>✓ Facturación FEL<br>✓ Créditos y Cobranza<br>✓ Bancos y Conciliaciones<br>✓ Contabilidad Integrada<br>✓ Reportes Gerenciales</p><br>
+<b>Robin Gómez<br>Grupo Sagei<br>4152-5433</b>
 </div>
 </div>
 </section>
 
-<section class="fade">
-<h2 class="titulo-seccion">Más de 20 años ayudando empresas a crecer</h2>
-<p class="texto-seccion">Desde la facturación electrónica hasta la contabilidad financiera, SAGEI ERP centraliza toda la información crítica de su negocio.</p>
-<div class="stats">
-<div class="stat-card"><h3>20+</h3><p>Años de experiencia</p></div>
-<div class="stat-card"><h3>100%</h3><p>Información integrada</p></div>
-<div class="stat-card"><h3>24/7</h3><p>Disponibilidad operativa</p></div>
-<div class="stat-card"><h3>∞</h3><p>Escalable para crecer</p></div>
+<section id="beneficios">
+<h2 class="title">¿Por qué esta propuesta es importante?</h2>
+<div class="grid">
+<div class="card">📦 Control total de inventarios</div>
+<div class="card">💰 Facturación Electrónica FEL</div>
+<div class="card">📊 Información financiera inmediata</div>
+<div class="card">📈 Mayor control y rentabilidad</div>
 </div>
 </section>
 
-<section id="beneficios" class="fade">
-<h2 class="titulo-seccion">¿Por qué esta propuesta es importante para Ferretería Comercial Emmanuel?</h2>
-<div class="grid4">
-<div class="info-card">📦<br><br>Control total de inventarios</div>
-<div class="info-card">💰<br><br>Facturación Electrónica FEL</div>
-<div class="info-card">📊<br><br>Información financiera inmediata</div>
-<div class="info-card">📈<br><br>Mayor control y rentabilidad</div>
+<section>
+<h2 class="title">Problemas que ayudamos a resolver</h2>
+<div class="grid">
+<div class="card">❌ Diferencias de inventario</div>
+<div class="card">❌ Créditos vencidos sin seguimiento</div>
+<div class="card">❌ Información dispersa</div>
+<div class="card">❌ Reportes difíciles de obtener</div>
 </div>
 </section>
 
-<section class="fade">
-<h2 class="titulo-seccion">Problemas que ayudamos a resolver</h2>
-<div class="grid4">
-<div class="info-card">❌ Diferencias de inventario</div>
-<div class="info-card">❌ Créditos vencidos sin seguimiento</div>
-<div class="info-card">❌ Información dispersa</div>
-<div class="info-card">❌ Reportes difíciles de obtener</div>
+<section id="modulos">
+<h2 class="title">Módulos Principales</h2>
+<div class="gallery">
+<div class="item"><img src="assets/screenshots/facturacion.jpg"><div><h3>Facturación FEL</h3></div></div>
+<div class="item"><img src="assets/screenshots/existencias.jpg"><div><h3>Inventarios</h3></div></div>
+<div class="item"><img src="assets/screenshots/credito.jpg"><div><h3>Créditos</h3></div></div>
+<div class="item"><img src="assets/screenshots/estado-cuenta.jpg"><div><h3>Estado de Cuenta</h3></div></div>
+<div class="item"><img src="assets/screenshots/bancos.jpg"><div><h3>Bancos</h3></div></div>
+<div class="item"><img src="assets/screenshots/balance.jpg"><div><h3>Contabilidad</h3></div></div>
+<div class="item"><img src="assets/screenshots/anticipos.jpg"><div><h3>Anticipos</h3></div></div>
+<div class="item"><img src="assets/screenshots/vendedor.jpg"><div><h3>Ventas</h3></div></div>
+<div class="item"><img src="assets/screenshots/ventas.jpg"><div><h3>Reportes</h3></div></div>
 </div>
 </section>
 
-<section id="modulos" class="fade">
-<h2 class="titulo-seccion">Módulos Principales</h2>
-<div class="galeria">
-<div class="card"><img src="assets/screenshots/facturacion.jpg"><div class="card-body"><h3>Facturación Electrónica FEL</h3><p>Facturación certificada SAT, control de vendedores, descuentos, múltiples formas de pago y emisión rápida de documentos.</p></div></div><div class="card"><img src="assets/screenshots/existencias.jpg"><div class="card-body"><h3>Inventarios y Existencias</h3><p>Control completo de productos, costos, existencias por bodega y consultas en tiempo real.</p></div></div><div class="card"><img src="assets/screenshots/credito.jpg"><div class="card-body"><h3>Créditos y Cobranza</h3><p>Seguimiento de cartera, saldos pendientes, vencimientos y recuperación de cuentas por cobrar.</p></div></div><div class="card"><img src="assets/screenshots/estado-cuenta.jpg"><div class="card-body"><h3>Estado de Cuenta</h3><p>Generación de estados de cuenta detallados y análisis de antigüedad de saldos.</p></div></div><div class="card"><img src="assets/screenshots/bancos.jpg"><div class="card-body"><h3>Bancos</h3><p>Conciliación bancaria, emisión de cheques, movimientos financieros e integración contable.</p></div></div><div class="card"><img src="assets/screenshots/balance.jpg"><div class="card-body"><h3>Contabilidad</h3><p>Balance de saldos, estados financieros, resultados y análisis contable integral.</p></div></div><div class="card"><img src="assets/screenshots/anticipos.jpg"><div class="card-body"><h3>Anticipos</h3><p>Administración de anticipos de clientes y proveedores con control total de movimientos.</p></div></div><div class="card"><img src="assets/screenshots/vendedor.jpg"><div class="card-body"><h3>Reportes de Ventas</h3><p>Análisis comercial, comportamiento de ventas y seguimiento de resultados.</p></div></div><div class="card"><img src="assets/screenshots/ventas.jpg"><div class="card-body"><h3>Reportes Gerenciales</h3><p>Información estratégica para la toma de decisiones y crecimiento empresarial.</p></div></div>
-</div></section>
-
-<section id="oferta" class="fade">
-<h2 class="titulo-seccion">Oferta Especial para Ferretería Comercial Emmanuel</h2>
-<div class="cliente-box" style="grid-template-columns:1fr">
-<div>
-<div class="lista">
-✓ Configuración inicial<br>
-✓ Capacitación<br>
-✓ Soporte<br>
-✓ Acompañamiento<br>
-✓ Parametrización del sistema<br>
-✓ Migración de información
-</div>
-<div class="contacto-asesor">Mario Miranda<br>Grupo Sagei<br>4152-5433</div>
-</div>
+<section id="oferta">
+<h2 class="title">Oferta Especial para Ferretería Comercial Emmanuel</h2>
+<div class="box">
+✓ Configuración inicial<br>✓ Capacitación<br>✓ Soporte<br>✓ Acompañamiento<br>✓ Parametrización<br>✓ Migración de información<br><br>
+<b>Robin Gómez - Grupo Sagei - 4152-5433</b>
 </div>
 </section>
 
-<section id="contacto" class="fade">
-<h2 class="titulo-seccion">Solicite una demostración</h2>
-<p class="texto-seccion">Conozca cómo SAGEI ERP puede ayudarle a mejorar el control administrativo, financiero y comercial de su empresa.</p>
+<section id="contacto">
+<h2 class="title">Solicite una demostración</h2>
+<div class="box" style="text-align:center">
+Robin Gómez<br>Grupo Sagei<br>4152-5433
+</div>
 </section>
 
-<footer class="footer">
-<h3>SAGEI ERP 2026</h3>
-<p>Sistema Administrativo, Comercial y Contable desarrollado por Grupo Sagei.</p><br>
-<p>© 2026 Grupo Sagei. Todos los derechos reservados.</p>
-</footer>
+<footer class="footer">© 2026 Grupo Sagei</footer>
 
-<div class="lightbox" id="lightbox"><img id="lightboxImg"></div>
+<a class="whatsapp" href="https://wa.me/50241525433">WhatsApp</a>
 
+<div class="lightbox" id="lb"><img id="lbi"></div>
 <script>
-document.querySelectorAll('.card img').forEach(img=>{
- img.onclick=()=>{
-  document.getElementById('lightbox').style.display='flex';
-  document.getElementById('lightboxImg').src=img.src;
- }
-});
-document.getElementById('lightbox').onclick=()=>{
- document.getElementById('lightbox').style.display='none';
-};
-const obs=new IntersectionObserver(entries=>{
- entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show');});
-});
-document.querySelectorAll('.fade').forEach(el=>obs.observe(el));
+document.querySelectorAll('.gallery img').forEach(i=>i.onclick=()=>{lb.style.display='flex';lbi.src=i.src;});
+lb.onclick=()=>lb.style.display='none';
 </script>
-</body>
-</html>
+</body></html>
